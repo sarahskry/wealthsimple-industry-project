@@ -20,6 +20,12 @@ export default function GoalsMain() {
         <div className="goals-main__line--3"></div>
         <div className="goals-main__line--4"></div>
       </div>
+      <form className="goals-main__set-goal">
+        <label className="goals-main__set-goal-container">
+          <h2 className="goals-main__set-goal-label">Make a contribution</h2>
+          <input type="400" name="goal_amount" className="goals-main__set-goal-input" placeholder="400"></input>
+        </label>
+      </form>
     </div>
   )
 }

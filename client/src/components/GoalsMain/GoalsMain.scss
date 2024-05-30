@@ -16,10 +16,18 @@
     height: 1.5rem;
     width: 7rem;
     text-align: center;
+    border-radius: 2px;
+    border: 1.5px solid grey;
+    &:focus {
+      outline: none;
+      border: 1.5px solid #386C5F;
+      border-radius: 2px;
+    }
   }
   &__path {
     position: relative;
     width: 30rem;
+    height: 22rem;
   }
   &__point {
     width: 4rem;
