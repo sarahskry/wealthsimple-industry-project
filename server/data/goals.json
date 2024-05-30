@@ -1,0 +1,63 @@
+[
+    {
+      "id": "1",
+      "goal_name": "Emergency Fund",
+      "goal_amount": "$5000",
+      "contributions": [],
+
+      "details": [
+        {
+          "success_message": "You have made significant progress!",
+          "reward_fact": "A higher credit score can lead to lower interest rates and better financial terms."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "goal_name": "Vacation Fund",
+      "goal_amount": "$3000",
+      "contributions": [],
+      "details": [
+        {
+          "success_message": "Almost there!",
+          "reward_fact": "Investing early and regularly is key to achieving long-term financial goals."
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "goal_name": "Downpayment for a House",
+      "goal_amount": "$75,0000",
+      "contributions": [],
+      "details": [
+        {
+          "success_message": "Way to pay yourself first!",
+          "reward_fact": "Planning for retirement early and utilizing tax-advantaged retirement accounts can help secure financial stability in later years."
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "goal_name": "Get out of Debt",
+      "goal_amount": "$7000",
+      "contributions": [],
+      "details": [
+        {
+          "success_message": "You're almost at your goal!",
+          "reward_fact": "Don't be pressured into impulse purchases. Learn to politely decline unnecessary spending and stick to your budget.."
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "goal_name": "New Vehicle",
+      "goal_amount": "$35,000",
+      "contributions": [],
+      "details": [
+        {
+          "success_message": "Fantastic progress!",
+          "reward_fact": "Focus on small, achievable financial goals initially. Celebrating these milestones keeps you motivated and on track towards larger financial objectives."
+        }
+      ]
+    }
+  ]
