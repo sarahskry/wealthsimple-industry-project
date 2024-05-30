@@ -25,6 +25,21 @@ router.get("/", (_req, res) => {
   res.json(goals);
 });
 
+//Get endpoint for individual goals
+router.get("/:id", (req, res) => {
+  const goals = readGoals();
+  const singleGoal = goals.find(
+    (goal) => goal.id === req.params.id
+  );
+  if (!singleGoal) {
+    res.status(404).send("Goals not found, try again later");
+  } else {
+    res.json(singleGoal);
+  }
+});
+
+
+
 app.use('/goals', router);
 
 
