@@ -51,7 +51,9 @@ export const usePutGoal = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const fetchedData = await goalsApi.putGoalId(id, goalAmount);
+        if (goalAmount !== null) {
+          const fetchedData = await goalsApi.putGoalId(id, goalAmount);
+        }
         // setGoalAmount(fetchedData);
       } catch (error) {
         console.error(`Error putting Goal Amount`)
@@ -59,7 +61,7 @@ export const usePutGoal = () => {
     }
 
     fetchData();
-  }, [goalAmount, goalsApi])
+  }, [goalAmount])
 
   return { goalAmount, setGoalAmount }
 }

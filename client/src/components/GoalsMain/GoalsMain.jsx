@@ -11,10 +11,10 @@ export default function GoalsMain() {
   const [ coin3, setCoin3 ] = useState(false);
   const [ coin4, setCoin4 ] = useState(false);
   const [ coin5, setCoin5 ] = useState(false);
-  // const [goalAmount, setGoalAmount] = useState('');
   const [contribution, setContribution] = useState('');
   const { goal } = useFetchOneGoal();
-  const { goalAmount, setGoalAmount } = usePutGoal();
+  let initialGoal
+  const { goalAmount, setGoalAmount } = usePutGoal(initialGoal);
 
   function handleGoalSubmit(event) {
     event.preventDefault();
