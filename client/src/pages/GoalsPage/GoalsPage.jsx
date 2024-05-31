@@ -9,5 +9,5 @@ export default function GoalsPage() {
       </div>
       <Footer />
     </div>
-  )
+  );
 }
