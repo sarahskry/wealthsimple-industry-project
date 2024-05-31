@@ -42,8 +42,10 @@
   {
     "id": "4",
     "goal_name": "Get out of Debt",
-    "goal_amount": "0",
-    "contributions": [],
+    "goal_amount": "200",
+    "contributions": [
+      "500"
+    ],
     "details": [
       {
         "success_message": "You're almost at your goal!",
