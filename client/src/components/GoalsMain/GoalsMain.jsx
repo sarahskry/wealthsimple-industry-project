@@ -1,12 +1,12 @@
 import GoalReached from '../GoalReached/GoalReached';
 import './GoalsMain.scss';
 import coin from '../../assets/coin.svg';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useFetchOneGoal, usePutGoal, usePatchGoal } from '../../utils/hooks';
 
 export default function GoalsMain() {
   const [popUp, setPopUp] = useState(false);
-  const [ coin1, setCoin1 ] = useState(true);
+  const [ coin1, setCoin1 ] = useState(false);
   const [ coin2, setCoin2 ] = useState(false);
   const [ coin3, setCoin3 ] = useState(false);
   const [ coin4, setCoin4 ] = useState(false);
@@ -17,6 +17,13 @@ export default function GoalsMain() {
   const { contributionAmount, setContributionAmount } = usePatchGoal();
   const { goal } = useFetchOneGoal(contributionAmount);
   const [ contributionsList, setContributionsList ] = useState([]); 
+
+  useEffect(() => {
+    if (goal) {
+      setContributionsList(goal.contributions)
+      console.log(contributionsList);
+    }
+  }, [contributionAmount])
 
   function handleGoalSubmit(event) {
     event.preventDefault();
@@ -35,7 +42,24 @@ export default function GoalsMain() {
     console.log(contributionAmount);
     event.target.reset();
     const total = goal.contributions.reduce((a, b) => a + b, 0);
-
+    if (total >= (0.2 * goal.goal_amount)) {
+      setCoin1(true);
+    }
+    if (total >= (goal.goal_amount * 0.4)) {
+      setCoin2(true);
+    }
+    if (total >= (goal.goal_amount * 0.6)) {
+      setCoin3(true);
+    }
+    if (total >= (goal.goal_amount * 0.8)) {
+      setCoin4(true);
+    }
+    if (total >= (goal.goal_amount)) {
+      setCoin5(true);
+      setTimeout(() => {
+        setPopUp(true);
+      }, 2000)
+    }
   }
 
   if (goal) {
@@ -80,7 +104,7 @@ export default function GoalsMain() {
         <div className="contributions">
           <h2 className="contributions__heading">Past Contributions:</h2>
           <ul className="contributions__ul">
-            {goal.contributions.map((contribution, index) => {
+            {contributionsList.map((contribution, index) => {
               return <li key={index} className="contributions__li">{contribution}</li>
             })}
           </ul>
