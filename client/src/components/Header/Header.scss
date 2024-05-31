@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  padding: 2rem;
+
+  &__button {
+    background-color: white;
+    color: #386c5f;
+    text-transform: uppercase;
+    border-radius: 5rem;
+    padding: 1rem;
+    margin-right: 0.75rem;
+  }
+
+  &__link {
+    background-color: #386c5f;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5rem;
+    padding: 1rem;
+  }
+}
