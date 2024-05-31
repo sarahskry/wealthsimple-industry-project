@@ -5,6 +5,7 @@
   }
   &__header {
     font-size: 5rem;
+    color: #386c5f;
   }
 
   &__list {
@@ -12,13 +13,13 @@
     font-size: 2rem;
     border-radius: 5rem;
     background-color: lightgray;
-    color: grey;
+    color: #386c5f;
     text-align: center;
     padding: 0.5rem 0;
   }
 
   &__button {
-    background-color: darkgreen;
+    background-color: #386c5f;
     color: white;
     text-transform: uppercase;
     border-radius: 5rem;

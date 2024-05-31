@@ -1,6 +1,7 @@
 import "./SetGoalsPage.scss";
 import Header from "../../components/Header/Header";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 
 export default function SetGoalsPage() {
   return (
@@ -15,11 +16,11 @@ export default function SetGoalsPage() {
           name="Save For Vacation"
           id="Save For Vacation"
         >
-          <option value="vacation">Save For Vacation</option>
-          <option value="down payment">Save For Down Payment</option>
-          <option value="hamster">Save For a Hamster</option>
-          <option value="parrot">Save For a Parrot</option>
           <option value="spider">Save For a Spider</option>
+          <option value="vacation">Vacation Fund</option>
+          <option value="downpayment">Downpayment for a House</option>
+          <option value="parrot">Save For a Parrot</option>
+          <option value="emergency">Emergency Fund</option>
           <option value="goldfish">Save For a Goldfish</option>
         </select>
         <div>
@@ -28,6 +29,7 @@ export default function SetGoalsPage() {
           </Link>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

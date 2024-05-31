@@ -3,11 +3,11 @@
   justify-content: space-between;
   background-color: white;
   align-items: center;
-  padding-bottom: 1rem;
+  padding: 2rem;
 
   &__button {
     background-color: white;
-    color: black;
+    color: #386c5f;
     text-transform: uppercase;
     border-radius: 5rem;
     padding: 1rem;
@@ -15,7 +15,7 @@
   }
 
   &__link {
-    background-color: black;
+    background-color: #386c5f;
     color: white;
     text-transform: uppercase;
     border-radius: 5rem;
