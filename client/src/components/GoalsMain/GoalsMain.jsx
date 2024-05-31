@@ -4,7 +4,7 @@ import coin from '../../assets/coin.svg';
 import { useState } from 'react';
 
 export default function GoalsMain() {
-  // const [popUp, setPopUp] = useState(false);
+  const [popUp, setPopUp] = useState(false);
   const [ coin1, setCoin1 ] = useState(false);
   const [ coin2, setCoin2 ] = useState(false);
   const [ coin3, setCoin3 ] = useState(false);
@@ -26,7 +26,6 @@ export default function GoalsMain() {
   }
 
   // When Goal is reached setPopUp(true);
-
 
   return (
     <div className="goals-main">
@@ -70,7 +69,7 @@ export default function GoalsMain() {
         <ul></ul>
         <p className="contributions__total">Total:</p>
       </div>
-      {/* <GoalReached trigger={popUp}/> */}
+      <GoalReached trigger={popUp}/>
     </div>
   )
 }
