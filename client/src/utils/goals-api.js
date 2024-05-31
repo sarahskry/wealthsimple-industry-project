@@ -1,7 +1,7 @@
+import axios from 'axios';
 
-
-class GoalsApi {
-    constructor(baseUrl) {
+export default class GoalsApi {
+    constructor() {
         this.baseUrl = `${import.meta.env.VITE_LOCALHOST}`;
     }
 
@@ -15,7 +15,7 @@ class GoalsApi {
         }
     }
 
-    async getGoalsId() {
+    async getGoalsId(id) {
         try {
             const response = await axios.get(`${this.baseUrl}goals/${id}`);
             console.log(response);
@@ -25,7 +25,7 @@ class GoalsApi {
         }
     }
 
-    async putGoalId() {
+    async putGoalId(id) {
         try {
             const response = await axios.put(`${this.baseUrl}goals/${id}`);
             console.log(response);
@@ -35,7 +35,7 @@ class GoalsApi {
         }
     }
 
-    async patchGoalId() {
+    async patchGoalId(id) {
         try {
             const response = await axios.patch(`${this.baseUrl}goals/${id}`);
             console.log(response);
@@ -44,5 +44,4 @@ class GoalsApi {
             console.log("Could not update the specified goal", err);
         }
     }
-
 }
