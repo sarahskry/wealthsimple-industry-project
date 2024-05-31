@@ -46,12 +46,3 @@ class GoalsApi {
     }
 
 }
-
-// const axiosInstance = axios.create({
-//     baseURL: "http://localhost:8080",
-//   });
-//   export default class WarehouseAPI {
-//     static async getWarehouses() {
-//       const response = await axiosInstance.get("/warehouses");
-//       return response.data;
-//     }
