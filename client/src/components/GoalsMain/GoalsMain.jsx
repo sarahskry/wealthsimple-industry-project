@@ -1,8 +1,10 @@
+import GoalReached from '../GoalReached/GoalReached';
 import './GoalsMain.scss';
 import coin from '../../assets/coin.svg';
 import { useState } from 'react';
 
 export default function GoalsMain() {
+  // const [popUp, setPopUp] = useState(false);
   const [ coin1, setCoin1 ] = useState(false);
   const [ coin2, setCoin2 ] = useState(false);
   const [ coin3, setCoin3 ] = useState(false);
@@ -23,41 +25,52 @@ export default function GoalsMain() {
     console.log(contribution);
   }
 
+  // When Goal is reached setPopUp(true);
+
+
   return (
     <div className="goals-main">
-      <form className="goals-main__set-goal" onSubmit={handleGoalSubmit}>
-        <label className="goals-main__set-goal-container">
-          <h2 className="goals-main__set-goal-label">Goal Amount:</h2>
-          <input type="400" name="goal" className="goals-main__set-goal-input"></input>
-        </label>
-      </form>
-      <div className="goals-main__path">
-        <div className="goals-main__point goals-main__point--5">
-          {coin5 ? <img src={coin} alt="coin" className="goals-main__coin"/> : null}
+      <div className="goals-main__path-container">
+        <form className="goals-main__set-goal" onSubmit={handleGoalSubmit}>
+          <label className="goals-main__set-goal-container">
+            <h2 className="goals-main__set-goal-label">Goal Amount:</h2>
+            <input type="400" name="goal" className="goals-main__set-goal-input"></input>
+          </label>
+        </form>
+        <div className="goals-main__path">
+          <div className="goals-main__point goals-main__point--5">
+            {coin5 ? <img src={coin} alt="coin" className="goals-main__coin"/> : null}
+          </div>
+          <div className="goals-main__point goals-main__point--4">
+            {coin4 ? <img src={coin} alt="coin" className="goals-main__coin"/> : null}
+          </div>
+          <div className="goals-main__point goals-main__point--3">
+            {coin3 ? <img src={coin} alt="coin" className="goals-main__coin"/> : null}
+          </div>
+          <div className="goals-main__point goals-main__point--2">
+            {coin2 ? <img src={coin} alt="coin" className="goals-main__coin"/> : null}
+          </div>
+          <div className="goals-main__point goals-main__point--1">
+            {coin1 ? <img src={coin} alt="coin" className="goals-main__coin"/> : null}
+          </div>
+          <div className="goals-main__line--1"></div>
+          <div className="goals-main__line--2"></div>
+          <div className="goals-main__line--3"></div>
+          <div className="goals-main__line--4"></div>
         </div>
-        <div className="goals-main__point goals-main__point--4">
-          {coin4 ? <img src={coin} alt="coin" className="goals-main__coin"/> : null}
-        </div>
-        <div className="goals-main__point goals-main__point--3">
-          {coin3 ? <img src={coin} alt="coin" className="goals-main__coin"/> : null}
-        </div>
-        <div className="goals-main__point goals-main__point--2">
-          {coin2 ? <img src={coin} alt="coin" className="goals-main__coin"/> : null}
-        </div>
-        <div className="goals-main__point goals-main__point--1">
-          {coin1 ? <img src={coin} alt="coin" className="goals-main__coin"/> : null}
-        </div>
-        <div className="goals-main__line--1"></div>
-        <div className="goals-main__line--2"></div>
-        <div className="goals-main__line--3"></div>
-        <div className="goals-main__line--4"></div>
+        <form className="goals-main__set-goal" onSubmit={handleContributionSubmit}>
+          <label className="goals-main__set-goal-container">
+            <h2 className="goals-main__set-goal-label">Make a contribution</h2>
+            <input type="400" name="contribution" className="goals-main__set-goal-input"></input>
+          </label>
+        </form>
       </div>
-      <form className="goals-main__set-goal" onSubmit={handleContributionSubmit}>
-        <label className="goals-main__set-goal-container">
-          <h2 className="goals-main__set-goal-label">Make a contribution</h2>
-          <input type="400" name="contribution" className="goals-main__set-goal-input"></input>
-        </label>
-      </form>
+      <div className="contributions">
+        <h2 className="contributions__heading">Past Contributions:</h2>
+        <ul></ul>
+        <p className="contributions__total">Total:</p>
+      </div>
+      {/* <GoalReached trigger={popUp}/> */}
     </div>
   )
 }
