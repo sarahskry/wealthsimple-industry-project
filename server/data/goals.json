@@ -19,7 +19,11 @@
   {
     "id": "2",
     "goal_name": "Vacation Fund",
-    "contributions": [],
+    "contributions": [
+      "500",
+      "150",
+      "150"
+    ],
     "details": [
       {
         "success_message": "Almost there!",
@@ -30,7 +34,6 @@
   {
     "id": "3",
     "goal_name": "Downpayment for a House",
-    "goal_amount": 0,
     "contributions": [],
     "details": [
       {
