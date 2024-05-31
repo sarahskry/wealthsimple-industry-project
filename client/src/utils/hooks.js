@@ -22,7 +22,7 @@ export const useFetchGoals = () => {
   return { goals }
 }
 
-export const useFetchOneGoal = () => {
+export const useFetchOneGoal = (contributionAmount) => {
   const goalsApi = useMemo(() => new GoalsApi(), []);
   const { id } = useParams();
   const [goal, setGoal] = useState(null);
@@ -38,7 +38,7 @@ export const useFetchOneGoal = () => {
     }
 
     fetchData();
-  }, [goalsApi])
+  }, [goalsApi, contributionAmount])
 
   return { goal }
 }
@@ -51,7 +51,9 @@ export const usePutGoal = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const fetchedData = await goalsApi.putGoalId(id, goalAmount);
+        if (goalAmount !== null) {
+          const fetchedData = await goalsApi.putGoalId(id, goalAmount);
+        }
         // setGoalAmount(fetchedData);
       } catch (error) {
         console.error(`Error putting Goal Amount`)
@@ -59,7 +61,7 @@ export const usePutGoal = () => {
     }
 
     fetchData();
-  }, [goalAmount, goalsApi])
+  }, [goalAmount])
 
   return { goalAmount, setGoalAmount }
 }
