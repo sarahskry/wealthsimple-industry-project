@@ -15,7 +15,7 @@ export default class GoalsApi {
         }
     }
 
-    async getGoalsId(id) {
+    async getGoalId(id) {
         try {
             const response = await axios.get(`${this.baseUrl}goals/${id}`);
             console.log(response);

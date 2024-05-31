@@ -2,6 +2,7 @@ import GoalReached from '../GoalReached/GoalReached';
 import './GoalsMain.scss';
 import coin from '../../assets/coin.svg';
 import { useState } from 'react';
+import { useFetchOneGoal } from '../../utils/hooks';
 
 export default function GoalsMain() {
   const [popUp, setPopUp] = useState(false);
@@ -10,13 +11,14 @@ export default function GoalsMain() {
   const [ coin3, setCoin3 ] = useState(false);
   const [ coin4, setCoin4 ] = useState(false);
   const [ coin5, setCoin5 ] = useState(false);
-  const [goal, setGoal] = useState('');
+  const [goalAmount, setGoalAmount] = useState('');
   const [contribution, setContribution] = useState('');
+  const { goal } = useFetchOneGoal();
 
   function handleGoalSubmit(event) {
     event.preventDefault();
-    setGoal(event.target.goal.value);
-    console.log(goal);
+    setGoalAmount(event.target.goal.value);
+    console.log(goalAmount);
   }
 
   function handleContributionSubmit(event) {
