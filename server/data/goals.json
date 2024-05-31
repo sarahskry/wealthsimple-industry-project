@@ -2,12 +2,15 @@
   {
     "id": "1",
     "goal_name": "Emergency Fund",
+    "goal_amount": 700,
     "contributions": [
-      "700",
-      "700",
-      "400",
-      "500",
-      "123"
+      100,
+      500,
+      100,
+      1,
+      100,
+      200,
+      100
     ],
     "details": [
       {

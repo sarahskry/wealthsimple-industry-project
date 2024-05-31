@@ -22,7 +22,7 @@ export const useFetchGoals = () => {
   return { goals }
 }
 
-export const useFetchOneGoal = () => {
+export const useFetchOneGoal = (contributionAmount) => {
   const goalsApi = useMemo(() => new GoalsApi(), []);
   const { id } = useParams();
   const [goal, setGoal] = useState(null);
@@ -38,7 +38,7 @@ export const useFetchOneGoal = () => {
     }
 
     fetchData();
-  }, [goalsApi])
+  }, [goalsApi, contributionAmount])
 
   return { goal }
 }
