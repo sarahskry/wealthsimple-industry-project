@@ -66,7 +66,7 @@ router.patch("/:id", (req, res) => {
     if (goalIndex === -1) {
       return res.status(404).send("Goal not found, try again later");
     }
-
+    
     const updatedGoal = {
       ...goals[goalIndex], 
       contributions: [...goals[goalIndex].contributions, req.body.contributions]

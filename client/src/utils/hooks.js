@@ -69,20 +69,22 @@ export const usePutGoal = () => {
 export const usePatchGoal = () => {
   const goalsApi = useMemo(() => new GoalsApi(), []);
   const { id } = useParams();
-  const [contribution, setContribution] = useState(null);
+  const [contributionAmount, setContributionAmount] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const fetchedData = await goalsApi.patchGoalId(id);
-        setContribution(fetchedData);
+        if (contributionAmount !== null) {
+          const fetchedData = await goalsApi.patchGoalId(id, contributionAmount);
+        }
+        // setContributionAmount(fetchedData);
       } catch (error) {
         console.error(`Error patching contribution`)
       }
     }
 
     fetchData();
-  }, [goalsApi])
+  }, [contributionAmount])
 
-  return { contribution }
+  return { contributionAmount, setContributionAmount }
 }
