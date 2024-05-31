@@ -2,7 +2,6 @@
   {
     "id": "1",
     "goal_name": "Emergency Fund",
-    "goal_amount": "500",
     "contributions": [
       "500",
       "600",
@@ -18,7 +17,8 @@
         "success_message": "You have made significant progress!",
         "reward_fact": "A higher credit score can lead to lower interest rates and better financial terms."
       }
-    ]
+    ],
+    "goal_amount": "625"
   },
   {
     "id": "2",

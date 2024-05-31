@@ -25,9 +25,9 @@ export default class GoalsApi {
         }
     }
 
-    async putGoalId(id) {
+    async putGoalId(id, goal) {
         try {
-            const response = await axios.put(`${this.baseUrl}goals/${id}`);
+            const response = await axios.put(`${this.baseUrl}goals/${id}`, goal);
             console.log(response);
             return response.data;
         } catch (err) {

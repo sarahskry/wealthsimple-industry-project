@@ -51,17 +51,17 @@ export const usePutGoal = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const fetchedData = await goalsApi.putGoalId(id);
-        setGoalAmount(fetchedData);
+        const fetchedData = await goalsApi.putGoalId(id, goalAmount);
+        // setGoalAmount(fetchedData);
       } catch (error) {
         console.error(`Error putting Goal Amount`)
       }
     }
 
     fetchData();
-  }, [goalsApi])
+  }, [goalAmount, goalsApi])
 
-  return { goalAmount }
+  return { goalAmount, setGoalAmount }
 }
 
 export const usePatchGoal = () => {
