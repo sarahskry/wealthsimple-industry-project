@@ -32,6 +32,7 @@ export default function GoalsMain() {
   return (
     <div className="goals-main">
       <div className="goals-main__path-container">
+        <h2 className="goals-main__goal">{goal ? goal.goal_name : null}</h2>
         <form className="goals-main__set-goal" onSubmit={handleGoalSubmit}>
           <label className="goals-main__set-goal-container">
             <h2 className="goals-main__set-goal-label">Goal Amount:</h2>
@@ -61,7 +62,7 @@ export default function GoalsMain() {
         </div>
         <form className="goals-main__set-goal" onSubmit={handleContributionSubmit}>
           <label className="goals-main__set-goal-container">
-            <h2 className="goals-main__set-goal-label">Make a contribution</h2>
+            <h2 className="goals-main__set-goal-label">Make a contribution:</h2>
             <input type="400" name="contribution" className="goals-main__set-goal-input"></input>
           </label>
         </form>

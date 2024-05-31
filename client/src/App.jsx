@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/set-goal" element={<SetGoalsPage />} />
+        <Route path="/goals" element={<SetGoalsPage />} />
         <Route path="/goals/:id" element={<GoalsPage />} />
       </Routes>
     </BrowserRouter>

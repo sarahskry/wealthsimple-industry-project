@@ -4,14 +4,16 @@
   background-color: white;
   align-items: center;
   padding: 2rem;
+  border-bottom: 1px solid #a6a6a6;
 
   &__button {
     background-color: white;
     color: #386c5f;
     text-transform: uppercase;
     border-radius: 5rem;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     margin-right: 0.75rem;
+    border: 1.5px solid #386c5f;
   }
 
   &__link {
@@ -19,6 +21,7 @@
     color: white;
     text-transform: uppercase;
     border-radius: 5rem;
-    padding: 1rem;
+    padding: 0.6rem 1rem;
+    border: none;
   }
 }

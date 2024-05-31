@@ -5,11 +5,11 @@ import Footer from "../../components/Footer/Footer";
 
 export default function SetGoalsPage() {
   return (
-    <>
+    <div className="set-goals-page">
       <Header />
       <div className="page__section">
-        <div classname="page__wrapper">
-          <h1 className="page__header">What's your goal?</h1>
+        <div className="page__wrapper">
+          <h1 className="page__header">{"What's your goal?"}</h1>
         </div>
         <select
           className="page__list"
@@ -23,13 +23,13 @@ export default function SetGoalsPage() {
           <option value="emergency">Emergency Fund</option>
           <option value="goldfish">Save For a Goldfish</option>
         </select>
-        <div>
+        <div className="page__button-container">
           <Link className="page__button" to="/goals/:id">
             Submit
           </Link>
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
