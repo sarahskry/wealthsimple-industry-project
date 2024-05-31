@@ -25,7 +25,7 @@ router.get("/", (_req, res) => {
   res.json(goals);
 });
 
-//Get endpoint for individual goals
+//GET endpoint for individual goals
 router.get("/:id", (req, res) => {
   const goals = readGoals();
   const singleGoal = goals.find(
@@ -38,10 +38,51 @@ router.get("/:id", (req, res) => {
   }
 });
 
+//PUT endpoint to update a specific goal
+router.put("/:id/goal_amount", (req, res) => {
+  try {
+  const goals = readGoals();
+  const goalIndex = goals.findIndex((goal) => goal.id === req.params.id);
 
+  if (goalIndex === -1) {
+    return res.status(404).send("Goal not found, try again later");
+  }
+  goals[goalIndex].goal_amount = req.body.goal_amount;
+
+  fs.writeFileSync('./data/goals.json', JSON.stringify(goals, null, 2));
+
+  res.json(goals[goalIndex]);
+} catch (error) {
+  console.error("Error handling PUT request:", error)
+  res.status(500).send("An error occured while processing your request")
+}
+});
+
+//PATCH endpoints to update the contributions array
+router.patch("/:id/contributions", (req, res) => {
+  try {
+    const goals = readGoals();
+    const goalIndex = goals.findIndex((goal) => goal.id === req.params.id);
+    if (goalIndex === -1) {
+      return res.status(404).send("Goal not found, try again later");
+    }
+
+    const updatedGoal = {
+      ...goals[goalIndex], 
+      contributions: [...goals[goalIndex].contributions, ...req.body.contributions]
+    };
+
+    goals[goalIndex] = updatedGoal;
+    fs.writeFileSync('./data/goals.json', JSON.stringify(goals, null, 2));
+
+    res.json(updatedGoal); 
+  } catch (error) {
+    console.error("Error handling PATCH request:", error);
+    res.status(500).send("An error occurred while processing your request");
+  }
+});
 
 app.use('/goals', router);
-
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
