@@ -29,5 +29,13 @@
   }
   &__header {
     margin: 0;
+    text-align: center;
+    color: #386C5F;
+    font-size: 1.5rem;
+  }
+  &__message {
+    text-align: center;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
   }
 }
