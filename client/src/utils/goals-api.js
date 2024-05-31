@@ -35,9 +35,9 @@ export default class GoalsApi {
         }
     }
 
-    async patchGoalId(id) {
+    async patchGoalId(id, contribution) {
         try {
-            const response = await axios.patch(`${this.baseUrl}goals/${id}`);
+            const response = await axios.patch(`${this.baseUrl}goals/${id}`, contribution);
             console.log(response);
             return response.data;
         } catch (err) {

@@ -3,27 +3,23 @@
     "id": "1",
     "goal_name": "Emergency Fund",
     "contributions": [
+      "700",
+      "700",
+      "400",
       "500",
-      "600",
-      "600",
-      400,
-      400,
-      400,
-      400,
-      400
+      "123"
     ],
     "details": [
       {
         "success_message": "You have made significant progress!",
         "reward_fact": "A higher credit score can lead to lower interest rates and better financial terms."
       }
-    ],
-    "goal_amount": "625"
+    ]
   },
   {
     "id": "2",
     "goal_name": "Vacation Fund",
-    "goal_amount": "0",
+    "goal_amount": 0,
     "contributions": [],
     "details": [
       {
@@ -35,7 +31,7 @@
   {
     "id": "3",
     "goal_name": "Downpayment for a House",
-    "goal_amount": "0",
+    "goal_amount": 0,
     "contributions": [],
     "details": [
       {
@@ -47,10 +43,8 @@
   {
     "id": "4",
     "goal_name": "Get out of Debt",
-    "goal_amount": "200",
-    "contributions": [
-      "500"
-    ],
+    "goal_amount": 0,
+    "contributions": [],
     "details": [
       {
         "success_message": "You're almost at your goal!",
@@ -61,7 +55,7 @@
   {
     "id": "5",
     "goal_name": "New Vehicle",
-    "goal_amount": "0",
+    "goal_amount": 0,
     "contributions": [],
     "details": [
       {
