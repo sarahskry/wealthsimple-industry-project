@@ -2,8 +2,12 @@
   {
     "id": "1",
     "goal_name": "Emergency Fund",
-    "goal_amount": "",
-    "contributions": [],
+    "goal_amount": "500",
+    "contributions": [
+      "500",
+      "600",
+      "600"
+    ],
     "details": [
       {
         "success_message": "You have made significant progress!",

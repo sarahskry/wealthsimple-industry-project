@@ -39,7 +39,7 @@ router.get("/:id", (req, res) => {
 });
 
 //PUT endpoint to update a specific goal
-router.put("/:id/goal_amount", (req, res) => {
+router.put("/:id", (req, res) => {
   try {
   const goals = readGoals();
   const goalIndex = goals.findIndex((goal) => goal.id === req.params.id);
@@ -59,7 +59,7 @@ router.put("/:id/goal_amount", (req, res) => {
 });
 
 //PATCH endpoints to update the contributions array
-router.patch("/:id/contributions", (req, res) => {
+router.patch("/:id", (req, res) => {
   try {
     const goals = readGoals();
     const goalIndex = goals.findIndex((goal) => goal.id === req.params.id);
@@ -69,7 +69,7 @@ router.patch("/:id/contributions", (req, res) => {
 
     const updatedGoal = {
       ...goals[goalIndex], 
-      contributions: [...goals[goalIndex].contributions, ...req.body.contributions]
+      contributions: [...goals[goalIndex].contributions, req.body.contributions]
     };
 
     goals[goalIndex] = updatedGoal;
