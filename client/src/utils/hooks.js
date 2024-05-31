@@ -30,7 +30,7 @@ export const useFetchOneGoal = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const fetchedData = await goalsApi.getGoalsId(id);
+        const fetchedData = await goalsApi.getGoalId(id);
         setGoal(fetchedData);
       } catch (error) {
         console.error(`Error fetching goal with id ${id}: ${error}`)

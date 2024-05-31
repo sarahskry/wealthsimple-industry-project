@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         {/* <Route to="/set-goal" element={<SetGoalsPage />}/> */}
-        <Route path="/goals" element={<GoalsPage />}/>
+        <Route path="/goals/:id" element={<GoalsPage />}/>
       </Routes>
     </BrowserRouter>
   )
