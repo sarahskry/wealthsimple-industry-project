@@ -1,5 +1,6 @@
 import "./SetGoalsPage.scss";
 import Header from "../../components/Header/Header";
+import { Link } from "react-router-dom";
 
 export default function SetGoalsPage() {
   return (
@@ -22,9 +23,9 @@ export default function SetGoalsPage() {
           <option value="goldfish">Save For a Goldfish</option>
         </select>
         <div>
-          <button className="page__button" type="button">
+          <Link className="page__button" to="/goals/:id">
             Submit
-          </button>
+          </Link>
         </div>
       </div>
     </>
